@@ -3,25 +3,29 @@
         "job_name": "JR Dev",
         "job_description": "Using various modern technologies, sketching, developing, and implementing AWS cloud-based applications. Assisting and supporting the owner of the product with decomposing technical stories, identifying feature epics, and product backlog grooming.Working with the following technologies that are present in our stack: Javascript, Python, SQL, etc. Being comfortable and supportive working in a collaborative, agile team environment.",
         "job_salary": 80000,
-        "job_qualifications": "Graduate from Full Stack Bootcamp"
+        "job_qualifications": "Graduate from Full Stack Bootcamp",
+        "job_location": "Chicago, Illinois"
 
     },
     {
         "job_name": "Bootcamp TA",
         "job_description":"Aide David with keeping the class under control. Make sure everyone used the variable name 'Banana'. Help students understand what all these letters and words mean", 
         "job_salary": 1000000,
-        "job_qualifications":"Know what coding is"
+        "job_qualifications":"Know what coding is",
+        "job_location": "Tucson, Arizona"
     },
     {
         "job_name": "Will code for food",
         "job_description":"Be a professional googler", 
         "job_salary": "food",
-        "job_qualifications":"Read description above"
+        "job_qualifications":"Read description above",
+        "job_location": "Phoenix, Arizona"
     },
     {
         "job_name": "Front End Dev",
         "job_description":"Work with Javascript, HTMl, CSS, etc. Understand the syntax and current processes to help aide backend developers.", 
         "job_salary": 100000,
-        "job_qualifications":"Create a working and functional website structure."
+        "job_qualifications":"Create a working and functional website structure.",
+        "job_location": "San Francisco , California"
     }
 ]
