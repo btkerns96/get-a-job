@@ -1,5 +1,4 @@
-// update with new variable name (***) <= placeholder
-const **** = (req, res, next) => {
+const ChckAuth = (req, res, next) => {
     if (!req.session.logged_in) {
       res.redirect('/login');
     } else {
@@ -7,4 +6,4 @@ const **** = (req, res, next) => {
     }
   };
   
-  module.exports = ****;
+  module.exports = ChckAuth;
