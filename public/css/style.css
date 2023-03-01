@@ -1,0 +1,100 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    padding-top: 20px;
+    color: #616ff6;;
+}
+
+h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #0e111d;
+}
+
+.hero-body {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(./assets/get-a-job-hero.png);
+    height: 400px;
+    background-size: cover;
+    background-color: #fff;
+    margin-top: -10px;
+}
+
+.card {
+    margin-bottom: 10%;
+    padding-top: 5%;
+    border-radius: 10px;
+    background-color: #e7e7e8;
+}
+
+.content {
+    padding-top: 50px;
+}
+
+.control {
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
+.text-lg {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    color: #0e111d;
+}
+
+.numbered {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #0e111d;
+}
+
+.button {
+    background-color: #616ff6;
+    border-radius: 0px;
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+    box-shadow: #20273b 2px 2px 0 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button:hover {
+    background-color: #fff;
+}
+
+.button:active {
+    box-shadow: #01093c 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .button {
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}
