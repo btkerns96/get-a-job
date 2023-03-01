@@ -10,8 +10,16 @@
     integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- <link rel="stylesheet" href="/css/jass.css"> -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="./public/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -43,8 +51,8 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-link"><strong>Sign up</strong></a>
-            <a class="button is-link is-outlined"><strong>Login</strong></a>
+            <a class="button">Sign up</a>
+            <a class="button">Login</a>
           </div>
         </div>
       </div>
@@ -52,10 +60,11 @@
     </div>
   </nav>
 
+
   <!-- Start Hero -->
   <section class="hero is-medium">
     <div class="hero-body has-text-centered">
-      <h1 class="title is-2">Get a Job: Job Board</h1>
+      <h1 class="title is-1">Get a Job: Job Board</h1>
       <div id="hero-input-group" class="field has-addons has-addons-centered">
         <div class="control">
           <input class="input is-medium" type="text" placeholder="Job Title, Keyword" />
@@ -64,7 +73,7 @@
           <input class="input is-medium" type="text" placeholder="Location, Zip Code" />
         </div>
         <div class="control">
-          <a class="button is-medium button is-link">
+          <a class="button is-medium">
             <i class="fal fa-search"></i>
           </a>
         </div>
@@ -72,44 +81,72 @@
     </div>
   </section>
 
-  <!-- featured headline-->
+  <!-- start Featured Jobs-->
+
   <div class="container is-max-desktop pb-6">
     <section class="featured">
       <div class="level divider">
-        <div class="level-left">
           <div class="level-item">
-            <h1 class="subtitle">Featured Jobs</h1>
+            <h1 class="subtitle is-2">How it works</h1>
           </div>
         </div>
       </div>
+    </section>
   </div>
 
-  <!-- start Job Post-->
+  <section class="section feature pt-0">
+    <div class="container">
+      <div class="columns is-multiline has-text-centered is-justify-content-center">
+        <div class="column is-4-desktop is-6-tablet" data-aos="fade-right" data-aos-delay="200">
+          <span class="text-lg font-weight-bold">01</span>
+          <h3 class="numbered mt-2 mb-4">Find your dream job!</h3>
+          <p></p>
+        </div>
+        <div class="column is-4-desktop is-6-tablet" data-aos="fade-right" data-aos-delay="400">
+          <span class="text-lg font-weight-bold">02</span>
+          <h3 class="numbered mt-2 mb-4">Apply for the job!</h3>
+          <p></p>
+        </div>
+        <div class="column is-4-desktop is-6-tablet" data-aos="fade-right" data-aos-delay="600">
+          <span class="text-lg font-weight-bold">03</span>
+          <h3 class="numbered mt-2 mb-4">Get the job!</h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <div class="container is-max-desktop" id="pane-2">
     <section class="content">
       <div class="columns features">
         <div class="column is-full">
           <div class="card is-shady">
             <div class="card-content">
-              <div class="content">
-                <div class="columns is-multiline is-mobile">
-                  <div class="column is-one-quarter">
-                    Feb. 18, 2023
-                  </div>
-                  <div class="column is-one-quarter">
-                    Phoenix, AZ
-                  </div>
-                  <div class="column is-one-quarter">
-                    $100,000
+              <section class="section feature pt-0">
+                <div class="container">
+                  <div class="columns is-multiline is-mobile">
+                    <h6 class="column is-one-quarter">
+                      Feb. 18, 2023
+                    </h6>
+                    <h6 class="column is-one-quarter">
+                      Phoenix, AZ
+                    </h6>
+                    <h6 class="column is-one-quarter">
+                      $100,000
+                    </h6>
                   </div>
                 </div>
-              </div>
-              <h4>Job Name</h4>
-              <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim
-                neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra
-                nam.</p>
-              <span class="button is-link modal-button" data-target="modal-image2">View Job</span>
-              <span class="button is-link is-outlined" data-target="modal-image2">Save Job</span>
+                <h4 class="subtitle is-3">Job Name</h4>
+                <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim
+                  neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra
+                  nam.</p>
+                  <div class="buttons">
+                    <a class="button">Apply Now</a>
+                    <a class="button">Save Job</a>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
@@ -123,12 +160,12 @@
         <div class="level-item">
           <div class="field has-addons has-addons-centered">
             <div class="control">
-              <a class="button is-small" disabled>
+              <a class="button" disabled>
                 <i class="far fa-chevron-left"></i>
               </a>
             </div>
             <div class="control">
-              <a class="button is-small">
+              <a class="button">
                 <i class="far fa-chevron-right"></i>
               </a>
             </div>
@@ -139,12 +176,12 @@
 </body>
 
 <!-- footer start/main.handlebars -->
-<!-- <footer class="footer">
+<footer class="footer">
   <div class="content has-text-centered">
     <p> Project coded by
       <strong>willCodeForFood</strong> view the project on <a href="https://github.com/btkerns96/get-a-job">GitHub</a>.
     </p>
   </div>
-</footer> -->
+</footer>
 
 <!-- footer end -->
