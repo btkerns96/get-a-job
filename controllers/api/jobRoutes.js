@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+// const { Project, User } = require('../models');
+const { Project, User} = require('../../models');
 const ChckAuth = require('../utils/auth');
 
 // Get all job posts and include user 
-router.get('/', async (req, res) => {
+router.get('/jobs', async (req, res) => {
   try {
     const jobData = await Project.findAll({
       include: [{ model: User }],
@@ -16,7 +17,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get a single job post by id and include user 
-router.get('/:id', async (req, res) => {
+router.get('/jobs/:id', async (req, res) => {
   try {
     const jobData = await Project.findByPk(req.params.id, {
       include: [{ model: User }],
@@ -29,7 +30,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Render the new job post form
-router.get('/new', ChckAuth, (req, res) => {
+router.get('/jobs/new', ChckAuth, (req, res) => {
   res.render('new-job');
 });
 
