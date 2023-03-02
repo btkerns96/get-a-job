@@ -35,11 +35,20 @@ h4 {
     margin-top: -10px;
 }
 
+.head-body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(./assets/get-a-job-hero-3.jpg);
+    height: 400px;
+    padding-top: 50px;
+    background-size: cover;
+    background-color: #fff;
+    margin-top: -10px;
+}
+
 .card {
     margin-bottom: 10%;
     padding-top: 5%;
     border-radius: 10px;
-    background-color: #e7e7e8;
+    background-color: #f7f7f7;
 }
 
 .content {
