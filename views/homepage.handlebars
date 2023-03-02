@@ -1,0 +1,106 @@
+ {{#each projects as |project| }}
+ 
+ <section class="hero is-medium">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1">Get a Job: Job Board</h1>
+      <div id="hero-input-group" class="field has-addons has-addons-centered">
+        <div class="control">
+          <input class="input is-medium" type="text" placeholder="Job Title, Keyword" />
+        </div>
+        <div class="control">
+          <input class="input is-medium" type="text" placeholder="Location, Zip Code" />
+        </div>
+        <div class="control">
+          <a class="button is-medium">
+            <i class="fal fa-search"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works section -->
+
+  <div class="container is-max-desktop  pb-6">
+    <section class="featured">
+      <div class="level divider">
+        <div class="level-item">
+          <h1 class="subtitle is-2">How it works</h1>
+        </div>
+      </div>
+  </div>
+  </section>
+  </div>
+
+  <section class="section feature pt-0">
+    <div class="container">
+      <div class="columns is-multiline has-text-centered is-justify-content-center">
+        <div class="column is-4-desktop is-6-tablet" data-aos="fade-right" data-aos-delay="200">
+          <span class="text-lg font-weight-bold">01</span>
+          <h3 class="numbered mt-2 mb-4">Find your dream job!</h3>
+          <p></p>
+        </div>
+        <div class="column is-4-desktop is-6-tablet" data-aos="fade-right" data-aos-delay="400">
+          <span class="text-lg font-weight-bold">02</span>
+          <h3 class="numbered mt-2 mb-4">Apply for the job!</h3>
+          <p></p>
+        </div>
+        <div class="column is-4-desktop is-6-tablet" data-aos="fade-right" data-aos-delay="600">
+          <span class="text-lg font-weight-bold">03</span>
+          <h3 class="numbered mt-2 mb-4">Get the job!</h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Jobs card -->
+  <div class="container is-max-desktop" id="pane-2">
+    <section class="content">
+      <div class="columns features">
+        <div class="column is-full">
+          <div class="card is-shady">
+            <div class="card-content">
+              <section class="section feature pt-0">
+                <div class="container">
+                  <div class="columns is-multiline is-mobile">
+                    <h6 class="column is-one-quarter">
+                     {{format_date project.date_created}}
+                    </h6>
+                    <h6 class="column is-one-quarter">
+                     {{project.job_location}}
+                    </h6>
+                    <h6 class="column is-one-quarter">
+                     {{project.job_salary}}
+                    </h6>
+                  </div>
+                </div>
+                <h4 class="subtitle is-3">{{project.job_name}}</h4>
+                <p>{{project.job_description}}</p>
+                <div class="buttons">
+                  <a href="#" class="button">Apply Now</a>
+                  <a href="#" class="button">Save Job</a>
+                </div>
+            </div>
+    </section>
+  </div>
+
+  <!-- next page arrows -->
+  <div class="level-right">
+    <div class="level-item">
+      <div class="field has-addons has-addons-centered">
+        <div class="control">
+          <a class="button" disabled>
+            <i class="far fa-chevron-left"></i>
+          </a>
+        </div>
+        <div class="control">
+          <a class="button">
+            <i class="far fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{/each}}

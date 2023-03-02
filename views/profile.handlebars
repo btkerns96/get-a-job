@@ -1,0 +1,68 @@
+<section class="content">
+    <div class="columns features">
+        <div class="column is-full">
+            <div class="card is-shady">
+                <div class="card-content">
+                    <section class="section feature pt-0">
+                        <h4 class="subtitle is-3">Profile</h4>
+                        <div class="content">
+                            <table class="table-profile">
+                                <tr>
+                                    <th colspan="1"></th>
+                                    <th colspan="2"></th>
+                                </tr>
+                                <tr>
+                                    <td>Name:</td>
+                                    <td>{{name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Address:</td>
+                                    <td>{{address}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone:</td>
+                                    <td>{{phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email:</td>
+                                    <td>{{email}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>
+                        <h4 class="is-size-5 mb-2 has-text-weight-bold">Resume</h4>
+                        <div class="file is-link">
+                            <label class="file-label">
+                                <input class="file-input" type="file" name="resume">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                        Upload Resume…
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                </div>
+            </div>
+
+            {{#if projects.length}}
+            <div class="columns features">
+                <div class="column is-full">
+                    <div class="card is-shady">
+                        <div class="card-content">
+                            <section class="section feature pt-0">
+                                <h4 class="subtitle is-3">Saved Jobs</h4>
+
+                                {{#each projects as |project|}}
+                                <div class="content">
+
+                                </div>
+                                <br>
+                                {{/each}}
+                        </div>
+                        {{/if}}
+</section>
+
+<script src="./js/profile.js"></script>

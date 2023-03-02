@@ -1,0 +1,39 @@
+<div class="container is-max-desktop" id="pane-2">
+    <section class="content">
+        <div class="columns features">
+            <div class="column is-full">
+                <div class="card is-shady">
+                    <div class="card-content">
+                        <section class="section feature pt-0">
+                            <div class="container">
+                                <div class="columns is-multiline is-mobile">
+                                    <h6 class="column is-one-quarter">
+                                        {{format_date project.date_created}}
+                                    </h6>
+                                    <h6 class="column is-one-quarter">
+                                        {{project.job_location}}
+                                    </h6>
+                                    <h6 class="column is-one-quarter">
+                                        {{project.job_salary}}
+                                    </h6>
+                                </div>
+                            </div>
+
+                            <h4 class="subtitle is-3">{{project.job_name}}</h4>
+                            <p>{{project.job_description}}</p>
+                            <h4 class="subtitle is-3">Qualifications</h4>
+                            <ul>
+                                <li>Donec blandit a lorem id convallis.</li>
+                                <li>Cras gravida arcu at diam gravida gravida.</li>
+                                <li>Integer in volutpat libero.</li>
+                                <li>Donec a diam tellus.</li>
+                            </ul>
+                            <div class="buttons">
+                                <a class="button">Apply Now</a>
+                                <a class="button">Save Job</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Get a Job: Job Board</title>
-    <!-- Font Awesome Link -->
+  <!-- Font Awesome Link -->
   <script src="https://kit.fontawesome.com/2828f7885a.js"
     integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
     crossorigin="anonymous"></script>
@@ -38,8 +38,10 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item"> Home </a>
-          <a class="navbar-item"> Post a Job </a>
+          <a href="/" class="navbar-item"> Home </a>
+          <a href="/" class="navbar-item"> Post a Job </a>
+          {{#if logged_in}}
+          <a href="/profile" class="button">Profile</a>
         </div>
       </div>
 
@@ -47,7 +49,9 @@
         <div class="navbar-item">
           <div class="buttons">
             <a class="button">Sign up</a>
-            <a class="button">Login</a>
+            {{else}}
+            <a href="/login" class="button">Login</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -55,20 +59,21 @@
     </div>
   </nav>
 
-    <main class="container container-fluid mt-5">
-      {{{ body }}}
-    </main>
+  <main class="container container-fluid mt-5">
+    {{{ body }}}
+  </main>
 
-    <footer>
-          <div class="content has-text-centered">
-      <p> Project coded by <strong>willCodeForFood</strong> view the project on <a href="https://github.com/btkerns96/get-a-job">GitHub</a>.</p>
-  </div>
-    </footer>
+  <footer>
+    <div class="content has-text-centered">
+      <p> Project coded by <strong>willCodeForFood</strong> view the project on <a
+          href="https://github.com/btkerns96/get-a-job">GitHub</a>.</p>
+    </div>
+  </footer>
 
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 
-  </body>
+</body>
 
 </html>
