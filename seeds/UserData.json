@@ -4,34 +4,34 @@
         "address": "12345 main st",
         "phone": "123-456-7890",
         "email":  "awalkosz@gmail.com",
-        "password": "password1"
+        "password": "password123"
     },
     {
         "name": "rachel",
         "address": "12345 main st",
         "phone": "123-456-7890",
         "email":  "rwildberger@gmail.com",
-        "password": "password2"
+        "password": "password234"
     },
     {
         "name": "achraf",
         "address": "12345 main st",
         "phone": "123-456-7890",
         "email":  "achibane@gmail.com",
-        "password": "password3"
+        "password": "password345"
     },
     {
         "name": "brandon",
         "address": "12345 main st",
         "phone": "123-456-7890",
         "email":  "bkerns@gmail.com",
-        "password": "password4"
+        "password": "password456"
     },
     {
         "name": "micah",
         "address": "12345 main st",
         "phone": "123-456-7890",
         "email":  "mscharifi@gmail.com",
-        "password": "password5"
+        "password": "password567"
     }
 ]

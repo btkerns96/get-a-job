@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { User, Project } = require('../models');
-const ChckAuth = require('../utils/auth');
+const { User } = require('../models');
 
 // Render the login page
 router.get('/login', (req, res) => {
