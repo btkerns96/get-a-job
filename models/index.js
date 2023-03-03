@@ -1,7 +1,7 @@
 const User = require('./User');
 const JobPosts = require('./JobPosts');
 
-User.hasMany(jobPosts, {
+User.hasMany(JobPosts, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });

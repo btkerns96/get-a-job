@@ -11,11 +11,11 @@ JobPosts.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    job_title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    job_description: {
       type: DataTypes.STRING,
     },
     date_created: {
@@ -23,9 +23,16 @@ JobPosts.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    requirements: {
+    job_qualifications: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    job_salary: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
+    job_location: {
+      type: DataTypes.STRING,
     },
     user_id: {
       type: DataTypes.INTEGER,
