@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Project } = require('../models');
+const { JobPosts } = require('../models');
 
 // Render the homepage
 router.get('/', async (req, res) => {
   try {
-    const jobData = await Project.findAll({
+    const jobData = await JobPosts.findAll({
       order: [['date_created', 'DESC']],
       limit: 10,
     });
