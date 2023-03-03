@@ -30,18 +30,17 @@ h4 {
 .hero-body {
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(./assets/get-a-job-hero.png);
     height: 400px;
-    background-size: cover;
-    background-color: #fff;
-    margin-top: -10px;
-}
-
-.head-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(./assets/get-a-job-hero-3.jpg);
-    height: 400px;
     padding-top: 50px;
     background-size: cover;
     background-color: #fff;
-    margin-top: -10px;
+}
+
+.head-body {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(./assets/get-a-job-hero-3.jpg);
+    height: 300px;
+    padding-top: 50px;
+    background-size: cover;
+    background-color: #fff;
 }
 
 .card {
@@ -72,6 +71,7 @@ h4 {
     font-weight: 800;
     color: #0e111d;
 }
+
 
 .button {
     background-color: #616ff6;
