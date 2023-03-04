@@ -2,6 +2,16 @@ const router = require('express').Router();
 const { JobPosts } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// GET all jobs
+router.get('/', async (req, res) => {
+  try {
+    const jobPostData = await JobPosts.findAll();
+    res.status(200).json(jobPostData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Get all job posts and include user 
 // router.get('/jobs', async (req, res) => {
 //   try {
@@ -15,21 +25,17 @@ const withAuth = require('../../utils/auth');
 //   }
 // });
 
-router.post('/', withAuth, async (req, res) => {
-  try {
-    const jobPosts = await JobPosts.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
-
-    res.status(200).json(jobPosts);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
+// router.get('/', async (req, res) => {
+//   try {
+//     const jobData = await JobPosts.findAll();
+//     res.status(200).json(jobData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // Get a single job post by id and include user 
-// router.get('/jobs/:id', async (req, res) => {
+// router.get('/:id', async (req, res) => {
 //   try {
 //     const jobData = await JobPosts.findByPk(req.params.id, {
 //       include: [{ model: User }],
@@ -42,7 +48,7 @@ router.post('/', withAuth, async (req, res) => {
 // });
 
 // Render the new job post form
-// router.get('/jobs/new', ChckAuth, (req, res) => {
+// router.get('/jobs/new', withAuth, (req, res) => {
 //   res.render('new-job');
 // });
 
