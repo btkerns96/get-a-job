@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <!-- CSS Link -->
-  <link rel="stylesheet" href="./public/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <!-- Google Fonts Link -->
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Source+Sans+Pro&display=swap"
     rel="stylesheet">
@@ -25,42 +25,31 @@
   <!-- Start nav -->
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="container">
-      <div class="navbar-brand">
-        </a>
-
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-brand">
         <div class="navbar-start">
-          <a href="/" class="navbar-item"> Home </a>
-          <a href="/" class="navbar-item"> Post a Job </a>
-          {{#if logged_in}}
-          <a href="/profile" class="button">Profile</a>
+          <a href="/" class="navbar-item">Home</a>
+          <a href="/" class="navbar-item">Post a Job</a>
         </div>
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
+          <div class="field-is-grouped">
           <div class="buttons">
-            <a class="button">Sign up</a>
+            <p class="control"></p>
+            {{#if logged_in}}
+          <a href="/profile" class="button">Profile</a>
             {{else}}
             <a href="/login" class="button">Login</a>
             {{/if}}
           </div>
         </div>
       </div>
-
-    </div>
+     </div>
   </nav>
 
   <main class="container container-fluid mt-5">
-    {{{ body }}}
+    {{{body}}}
   </main>
 
   <footer>
@@ -70,9 +59,9 @@
     </div>
   </footer>
 
-  {{#if logged_in}}
+  {{!-- {{#if logged_in}} --}}
   <script src="/js/logout.js"></script>
-  {{/if}}
+  {{!-- {{/if}} --}}
 
 </body>
 

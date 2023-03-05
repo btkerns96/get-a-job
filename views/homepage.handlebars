@@ -1,4 +1,4 @@
- {{#each projects as |project| }}
+ {{#each jobs as |job| }}
  
  <section class="hero is-medium">
     <div class="hero-body has-text-centered">
@@ -65,18 +65,18 @@
                 <div class="container">
                   <div class="columns is-multiline is-mobile">
                     <h6 class="column is-one-quarter">
-                     {{format_date project.date_created}}
+                     {{format_date jobPosts.date_created}}
                     </h6>
                     <h6 class="column is-one-quarter">
-                     {{project.job_location}}
+                     {{jobPosts.job_location}}
                     </h6>
                     <h6 class="column is-one-quarter">
-                     {{project.job_salary}}
+                     {{jobPosts.job_salary}}
                     </h6>
                   </div>
                 </div>
-                <h4 class="subtitle is-3">{{project.job_name}}</h4>
-                <p>{{project.job_description}}</p>
+                <h4 class="subtitle is-3">{{jobPosts.job_name}}</h4>
+                <p>{{jobPosts.job_description}}</p>
                 <div class="buttons">
                   <a href="#" class="button">Apply Now</a>
                   <a href="#" class="button">Save Job</a>

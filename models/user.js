@@ -25,11 +25,8 @@ User.init(
             allowNull: false,
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isNumeric: true,  
-            },
         },
         email: {
             type: DataTypes.STRING,
@@ -37,7 +34,6 @@ User.init(
             unique: true,
             valiate: {
                 isEmail: true,
-                len: [10]
             },
         },
         password: {
