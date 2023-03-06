@@ -1,4 +1,4 @@
- {{#each jobs as |job| }}
+
  
  <section class="hero is-medium">
     <div class="hero-body has-text-centered">
@@ -55,6 +55,7 @@
   </section>
 
   <!-- Featured Jobs card -->
+   {{#each jobs as |job| }}
   <div class="container is-max-desktop" id="pane-2">
     <section class="content">
       <div class="columns features">
@@ -65,18 +66,19 @@
                 <div class="container">
                   <div class="columns is-multiline is-mobile">
                     <h6 class="column is-one-quarter">
-                     {{format_date jobPosts.date_created}}
+                     Date: {{jobPosts.date_created}}
+                    </h6>
+                    <span>Name: {{jobPosts.job_name}}</span>
+                    <h6 class="column is-one-quarter">
+                     Location: {{jobPosts.job_location}}
                     </h6>
                     <h6 class="column is-one-quarter">
-                     {{jobPosts.job_location}}
-                    </h6>
-                    <h6 class="column is-one-quarter">
-                     {{jobPosts.job_salary}}
+                     Salary: ${{jobPosts.job_salary}}
                     </h6>
                   </div>
                 </div>
                 <h4 class="subtitle is-3">{{jobPosts.job_name}}</h4>
-                <p>{{jobPosts.job_description}}</p>
+                <p>Description: {{jobPosts.job_description}}</p>
                 <div class="buttons">
                   <a href="#" class="button">Apply Now</a>
                   <a href="#" class="button">Save Job</a>
@@ -84,7 +86,7 @@
             </div>
     </section>
   </div>
-
+ {{/each}}
   <!-- next page arrows -->
   <div class="level-right">
     <div class="level-item">
@@ -103,4 +105,4 @@
     </div>
   </div>
 
-  {{/each}}
+ 
