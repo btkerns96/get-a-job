@@ -2,15 +2,71 @@ const router = require('express').Router();
 const { JobPosts } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// GET all jobs
-router.get('/', async (req, res) => {
-  try {
-    const jobPostData = await JobPosts.findAll();
-    res.status(200).json(jobPostData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// // GET all jobs
+// router.get('/', async (req, res) => {
+//   try {
+//     const jobPostData = await JobPosts.findAll();
+//     res.status(200).json(jobPostData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+
+
+
+
+// router.get('/', async (req, res) => {
+//   try {
+//     const dbJobData = await JobPosts.findAll({
+//       include: [
+//         {
+//           model: JobPosts,
+//           attribute: ['job_title', 'job_description']
+//         },
+//       ],
+//     });
+
+//     const jobs = dbJobData.map((jobs) =>
+//     jobs.get({plain:true})
+//     );
+
+//     res.render('homepage' , {
+//       jobs,
+//       loggedIn:req.session.loggedIn,
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
+
+// router.get('/jobs/:id' , withAuth, async (req, res) => {
+//   try {
+//     const dbJobData = await JobPosts.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: JobPosts,
+//           attributes: [
+//             'id',
+//             'job_title',
+//             'job_description',
+//             'date_created',
+//             'job_qualifications',
+//             'job_salary',
+//             'job_location',
+//           ],
+//         },
+//       ],
+//     });
+
+//     const jobs = dbJobData.get({ plain: true });
+//     res.render('jobs' , {jobs , loggedIn: req.session.loggedIn});
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 // Get all job posts and include user 
 // router.get('/jobs', async (req, res) => {
