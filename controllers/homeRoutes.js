@@ -19,15 +19,15 @@ router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const jobdata = await JobPosts.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-        {
-          model: JobPosts,
-        },
-      ],
+      // include: [
+      //   {
+      //     model: User,
+      //     attributes: ['name'],
+      //   },
+      //   {
+      //     model: JobPosts,
+      //   },
+      // ],
       
     });
 
