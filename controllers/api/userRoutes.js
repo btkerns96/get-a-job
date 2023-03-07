@@ -1,30 +1,47 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+
+// NEED TO CHECK WHY LOGIN IS NOT RESPONDING TO ENTER VALUES
 // Authenticate the user and log them in
-// router.post('/login', async (req, res) => {
-//   try {
-//     const userData = await User.findOne({ where: { email: req.body.email } });
-//     if (!userData) {
-//       res.status(400).json({ message: 'Incorrect email or password, please try again' });
-//       return;
-//     }
+router.post('/login', async (req, res) => {
+  try {
+    const userData = await User.findOne({ where: { email: req.body.email } });
+    if (!userData) {
+      res.status(400).json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
 
-//     const validPassword = userData.checkPassword(req.body.password);
-//     if (!validPassword) {
-//       res.status(400).json({ message: 'Incorrect email or password, please try again' });
-//       return;
-//     }
+    const validPassword = userData.checkPassword(req.body.password);
+    if (!validPassword) {
+      res.status(400).json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
 
-//     req.session.save(() => {
-//       req.session.user_id = userData.id;
-//       req.session.logged_in = true;
-//       res.status(200).json({ user: userData, message: 'You are now logged in!' });
-//     });
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      res.status(200).json({ user: userData, message: 'You are now logged in!' });
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+
+router.post('/signup', async (req, res) => {
+    try {
+      const newSignup = await User.create({
+        ...req.body,
+        user_id: req.session.user_id,
+      });
+  
+      res.status(200).json(newSignup);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
 
 // Log the user out and redirect to the homepage
 // router.get('/logout', (req, res) => {

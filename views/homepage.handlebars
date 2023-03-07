@@ -66,14 +66,16 @@
                 <div class="container">
                   <div class="columns is-multiline is-mobile">
                     <h6 class="column is-one-quarter">
-                     Date: {{job.date_created}}
+                     Date: {{format_date job.date_created}}
                     </h6>
-                    <span>Name: {{job.job_name}}</span>
+                    <h6 class="column is-one-quarter">
+                      Name: {{job.job_title}}
+                    </h6>
                     <h6 class="column is-one-quarter">
                      Location: {{job.job_location}}
                     </h6>
                     <h6 class="column is-one-quarter">
-                     Salary: ${{job.job_salary}}
+                     Salary: ${{format_amount job.job_salary}}
                     </h6>
                   </div>
                 </div>

@@ -19,17 +19,8 @@ router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const jobdata = await JobPosts.findAll({
-      // include: [
-      //   {
-      //     model: User,
-      //     attributes: ['name'],
-      //   },
-      //   {
-      //     model: JobPosts,
-      //   },
-      // ],
-      
-    });
+   
+      });
 
     // Serialize data so the template can read it
     const jobs = jobdata.map((jobPosts) => jobPosts.get({ plain: true }));
@@ -43,6 +34,32 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
+
+
+
+
+router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+  res.render('signup');
+});
+
+
+
+
+
+
 
 
 // GET a single job
