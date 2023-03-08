@@ -13,19 +13,19 @@
                                 </tr>
                                 <tr>
                                     <td>Name:</td>
-                                    <td>{{name}}</td>
+                                    <td>{{user.name}}</td>
                                 </tr>
                                 <tr>
                                     <td>Address:</td>
-                                    <td>{{address}}</td>
+                                    <td>{{user.address}}</td>
                                 </tr>
                                 <tr>
                                     <td>Phone:</td>
-                                    <td>{{phone}}</td>
+                                    <td>{{user.phone}}</td>
                                 </tr>
                                 <tr>
                                     <td>Email:</td>
-                                    <td>{{email}}</td>
+                                    <td>{{user.email}}</td>
                                 </tr>
                             </table>
                         </div>
@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            {{#if jobPosts.length}}
+            {{#if jobs.length}}
             <div class="columns features">
                 <div class="column is-full">
                     <div class="card is-shady">
