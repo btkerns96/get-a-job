@@ -1,20 +1,6 @@
 const router = require('express').Router();
 const { JobPosts, User } = require('../models');
 
-// GET all jobs
-router.get('/jobs', async (req, res) => {
-  try {
-    const jobPostData = await JobPosts.findAll();
-    res.status(200).json(jobPostData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-
-
-
-
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
@@ -35,6 +21,15 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET all jobs
+router.get('/jobs', async (req, res) => {
+  try {
+    const jobPostData = await JobPosts.findAll();
+    res.status(200).json(jobPostData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
@@ -44,12 +39,9 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-
-
-
 router.get('/signup', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/profile');
     return;
   }
   res.render('signup');

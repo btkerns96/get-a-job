@@ -1,7 +1,7 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
-    const email = document.querySelector('#email-login').ariaValueMax.trim();
-    const password = document.querySelector('#password-login').ariaValueMax.trim();
+    const email = document.querySelector('#email-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
 
     if (email && password) {
         const response = await fetch('/api/user/login', {
@@ -11,7 +11,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-     document.location.replace('/profile');
+     document.location.replace('/');
     } else {
     alert(response.statusText);
     }
