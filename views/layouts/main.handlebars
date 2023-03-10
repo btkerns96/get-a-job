@@ -37,11 +37,13 @@
           <div class="field-is-grouped">
           <div class="buttons">
             <p class="control"></p>
+           <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
-          <a href="/profile" class="button" id="profile">Profile</a>
-           <button class="no-button" id="logout">Logout</button>
+           <a href="/profile" class="button" id="profile">Profile</a>
+           <a class="button" id="logout">Logout</a>
             {{else}}
             <a href="/login" class="button" id="login">Login</a>
+            <a href="/signup" class="button" id="login">Signup</a>
             {{/if}}
           </div>
         </div>
@@ -61,7 +63,7 @@
   </footer>
 
   {{#if logged_in}}
-  <script src="./js/logout.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
 
 </body>

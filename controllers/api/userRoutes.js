@@ -30,7 +30,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
 router.post('/signup', async (req, res) => {
     try {
       const newSignup = await User.create({
@@ -44,17 +43,17 @@ router.post('/signup', async (req, res) => {
     }
   });
 
+  router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
 
-// Log the user out and redirect to the homepage
-// router.get('/logout', (req, res) => {
-//   if (req.session.logged_in) {
-//     req.session.destroy(() => {
-//       res.redirect('/');
-//     });
-//   } else {
-//     res.status(404).end();
-//   }
-// });
+
 
 // Render the signup page
 // router.get('/signup', (req, res) => {
