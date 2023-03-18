@@ -67,6 +67,14 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/about', (req, res) => {
+ res.render('about')
+
+});
+
+router.get('/contactUs', (req, res) =>{
+  res.render('contactUs')
+});
 
 
 
